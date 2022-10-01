@@ -1,0 +1,41 @@
+using namespace std;
+
+#include <iostream>
+#include <iomanip>
+#include "summation.h"
+
+/*
+* This program will compute the given functional values for the given
+* equation for an arbitary n. It will then generate a table of the
+* error and calculation values based on the closed form of the function
+* and the summation. Such calculations include starting at the smallest j
+* till n, staring at n till 1 for j, and using the closed form for a  given n
+*
+* CSC 2262 Programming Project No 2
+*
+* @author Chris Vasquez
+* @since 9/11/2020
+*
+*/
+
+
+int main(){
+
+Summation mySum;
+//Create an object of Summation to perform calculation and terminal output
+
+
+cout << "n             True              SL               Error                 LS            Error" << endl;
+cout << "-------------------------------------------------------------------------------------------------" << endl;
+//Output the table header into the terminal
+
+Show(mySum, 10.0);   //Calculate and Output the functional values for given equation for n = 10
+Show(mySum, 50.0);   //Calculate and Output the functional values for given equation for n = 50
+Show(mySum, 100.0);  //Calculate and Output the functional values for given equation for n = 100
+Show(mySum, 500.0);  //Calculate and Output the functional values for given equation for n = 500
+Show(mySum, 1000.0); //Calculate and Output the functional values for given equation for n = 1000
+Show(mySum, 5000.0); //Calculate and Output the functional values for given equation for n = 5000
+
+   return 0;
+}
+
